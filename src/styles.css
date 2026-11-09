@@ -1,0 +1,38 @@
+/* Ant Design handles components and theme colors. This file only covers layout and the custom SVG charts. */
+
+.app-layout { min-height: 100vh; }
+.app-header { height: auto; line-height: normal; padding: 12px 24px; position: sticky; top: 0; z-index: 10; }
+.app-content { padding: 24px; max-width: 1360px; width: 100%; margin: 0 auto; }
+.logo { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: #fff; font-size: 18px; }
+.foot { text-align: center; margin-top: 24px; font-size: 12.5px; }
+
+.chart-wrap { position: relative; width: 100%; }
+.chart-wrap svg { display: block; max-width: 100%; }
+.chart-tooltip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 14px));
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  pointer-events: none;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+.chart-tooltip strong { font-size: 14px; font-variant-numeric: tabular-nums; }
+
+.donut-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.donut { width: 190px; max-width: 100%; }
+.legend { list-style: none; margin: 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; }
+.legend button { width: 100%; display: flex; align-items: center; gap: 8px; border: 0; background: transparent; padding: 6px 8px; border-radius: 6px; font: inherit; font-size: 13px; cursor: pointer; text-align: left; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.legend span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.legend b { font-variant-numeric: tabular-nums; }
+
+.sector-bar { width: 6px; height: 30px; border-radius: 3px; flex: none; }
+
+@media (max-width: 575px) {
+  .app-header { padding: 12px 16px; position: static; }
+  .app-content { padding: 16px; }
+  .updated { display: none; }
+}
